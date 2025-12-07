@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <iterator>
+#include <algorithm>
 
 using namespace std;
 
@@ -45,6 +46,16 @@ double averangeNilai(const vector<pair<string, int>> &nilai)
     }
 
     return static_cast<double>(total) / nilai.size();
+}
+
+int maxNilai(const vector<pair<string, int>> &nilai){
+    if(nilai.empty()){
+        return 0;
+    }
+
+    auto min_it = min_element(nilai.begin(), nilai.end());
+    int min_val = *min_it;
+    
 }
 
 int main()
