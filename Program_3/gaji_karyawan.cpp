@@ -8,9 +8,9 @@ struct karyawan {
     int gaji_pokok;
     int masa_kerja_tahun;
     double pajak_persen = 0.025;
-    int bonus;
-    double potongan_pajak;
-    double gaji_bersih;
+    int bonus = 0;
+    double potongan_pajak = 0.0;
+    double gaji_bersih = 0.0;
 };
 
 struct bonus_gaji
@@ -31,7 +31,7 @@ int hitungBonus(int masa_kerja){
     persen_bonus = 0.05;
     }
     else{
-    persen_bonus = 0;
+    persen_bonus = 0.0;
     }
 
   return persen_bonus;
@@ -78,8 +78,6 @@ int main()
     cout<<"Masukan masa kerja pertahun: ";
     cin>>masa_kerja;
 
-    cout<<"=============================="<<endl;
-
   data_baru.nama = nama;
   data_baru.gaji_pokok = gaji_pokok;
   data_baru.masa_kerja_tahun = masa_kerja;
@@ -90,15 +88,26 @@ int main()
   
   }
 
+  cout<<"=========================================================================================="<<endl<<endl;
+  cout<<"                                   Data Gaji Karyawan                                             "<<endl<<endl;
+
+  cout<<"=========================================================================================="<<endl<<endl;
+
+  cout<<"================== Data Karyawan =================="<<endl;
   for (const auto& pekerja : kry)
   {
-    cout<<pekerja.nama<<endl;
-    cout<<pekerja.gaji_pokok<<endl;
-    cout<<pekerja.masa_kerja_tahun<<endl;
-    cout<<pekerja.bonus<<endl;
-    cout<<pekerja.gaji_bersih<<endl;
-    cout<<pekerja.potongan_pajak<<endl;
-    cout<<pekerja.pajak_persen;
+    cout<<" - Nama : "<<pekerja.nama<<endl;
+    cout<<" - Gaji Pokok: "<<pekerja.gaji_pokok<<endl;
+    cout<<" - Masa Kerja Tahun: "<<pekerja.masa_kerja_tahun<<endl<<endl;
+    cout<<"============== Pemotongan Gaji =============="<<endl;
+    cout<<" - Potongan Pajak: "<<pekerja.potongan_pajak<<endl;
+    cout<<" - Pajak Persen: "<<pekerja.pajak_persen<<endl<<endl;
+    cout<<"============== Total Gaji =============="<<endl;
+    cout<<" - Bonus: "<<pekerja.bonus<<endl;
+    cout<<" - Gaji bersih: "<<pekerja.gaji_bersih<<endl<<endl;
+
+    cout<<"================== Data Karyawan =================="<<endl;
+
   }
   
   
