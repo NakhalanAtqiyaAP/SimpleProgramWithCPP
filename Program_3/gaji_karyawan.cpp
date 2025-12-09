@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
@@ -19,7 +20,7 @@ struct bonus_gaji
     double persen_bonus;
 };
 
-int hitungBonus(int masa_kerja){
+double hitungBonus(int masa_kerja){
 
     double persen_bonus;
 
@@ -92,8 +93,9 @@ int main()
   cout<<"                                   Data Gaji Karyawan                                             "<<endl<<endl;
 
   cout<<"=========================================================================================="<<endl<<endl;
-
+    cout << fixed << setprecision(2);
   cout<<"================== Data Karyawan =================="<<endl;
+
   for (const auto& pekerja : kry)
   {
     cout<<" - Nama : "<<pekerja.nama<<endl;
@@ -106,11 +108,8 @@ int main()
     cout<<" - Bonus: "<<pekerja.bonus<<endl;
     cout<<" - Gaji bersih: "<<pekerja.gaji_bersih<<endl<<endl;
 
-    cout<<"================== Data Karyawan =================="<<endl;
 
   }
   
-  
-
   return 0;
 }
