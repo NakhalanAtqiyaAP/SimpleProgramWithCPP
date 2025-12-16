@@ -42,7 +42,7 @@ void pembalikKata(char kalimat[])
 
 void palindrom(char kalimat[]){
     int panjang = 0;
-    bool isPalindrom = false;
+    bool isPalindrom = true;
     while (kalimat[panjang] != '\0')
     {
         panjang++;
@@ -50,14 +50,14 @@ void palindrom(char kalimat[]){
 
     for (int i = 0; i < panjang / 2; i++)
     {
-        if (kalimat[i] == kalimat[panjang - 1 - i])
+        if (kalimat[i] != kalimat[panjang - 1 - i])
         {
-            isPalindrom = true;
-            continue;
+            isPalindrom = false;
+            break;
         }
         
     }
-    if (isPalindrom == true)
+    if (isPalindrom)
     {
         cout<<"Kalimat tersebut palindrom"<<endl;
     }else{

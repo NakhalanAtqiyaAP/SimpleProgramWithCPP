@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void hitungPanjangString(char kalimat[])
+void hitungPanjangKata(char kalimat[])
 {
     int panjang = 0;
     int jumlahKata = 0;
@@ -22,7 +22,7 @@ void hitungPanjangString(char kalimat[])
     panjang++;
   }
 
-  cout<<"Panjang dari string tersebut adalah "<<jumlahKata<<endl;
+  cout<<"Panjang dari kata tersebut adalah "<<jumlahKata<<endl;
   
 }
 
@@ -32,7 +32,7 @@ int main()
   cout<<"Masukan sebuah kalimat: ";
   cin.getline(kalimat, 255);
 
-  hitungPanjangString(kalimat);
+  hitungPanjangKata(kalimat);
 
 
   return 0;
