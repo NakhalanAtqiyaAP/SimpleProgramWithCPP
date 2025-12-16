@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void hitungPanjangKatap(char kalimat[])
+void hitungPanjangKata(char kalimat[])
 {
     int panjang = 0;
     int jumlahKata = 0;
