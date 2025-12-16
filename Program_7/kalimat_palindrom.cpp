@@ -22,7 +22,7 @@ void hitungPanjangKata(char kalimat[])
     panjang++;
   }
 
-  cout<<"Panjang dari string tersebut adalah "<<jumlahKata<<endl;
+  cout<<"Panjang dari kata tersebut adalah "<<jumlahKata<<endl;
 }
 
 void pembalikKata(char kalimat[])
@@ -75,7 +75,7 @@ int main()
   cout<<"Masukan sebuah kalimat: ";
   cin.getline(kalimat, 255);
 
-  hitungPanjangString(kalimat);
+  hitungPanjangKata(kalimat);
   pembalikKata(kalimat);
   cout<<endl;
   palindrom(kalimat);
