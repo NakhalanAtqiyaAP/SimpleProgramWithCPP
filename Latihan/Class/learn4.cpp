@@ -1,4 +1,5 @@
 //destructor
+//ketika exit dari program(membersihkan data -> biasa kalo ada new atau log)
 #include <iostream>
 using namespace std;
 
