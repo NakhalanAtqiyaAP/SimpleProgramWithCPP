@@ -6,15 +6,12 @@ class Persegi
 private:
     int sisi;
 public:
-    void Luas(int s){
+    int Luas(int s){
         sisi = s;
-        sisi *= sisi;
-        cout<<sisi;
+
+        return sisi * sisi;
     }
 };
-
-
-
 
 
 int main()
@@ -24,6 +21,6 @@ int main()
     cout<<"Masukan sisi :";
     cin>>sisi;
 
-    persegi.Luas(sisi);
+    cout<<"Luas Persegi:"<<persegi.Luas(sisi);
     return 0;
 }
