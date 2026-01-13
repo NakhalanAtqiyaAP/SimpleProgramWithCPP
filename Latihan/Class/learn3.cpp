@@ -1,4 +1,4 @@
-//Constructure
+//Constructor
 #include <iostream>
 using namespace std;
 
@@ -18,9 +18,6 @@ public:
         cout<<"\nNPM    :"<<npm;
     }
 };
-
-
-
 
 int main()
 {
